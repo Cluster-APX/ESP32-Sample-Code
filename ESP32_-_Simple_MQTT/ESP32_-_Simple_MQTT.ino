@@ -5,7 +5,9 @@
  * Publish ข้อมูล 1 ครั้งแต่เชื่อมต่อสำเร็จ
  */
 
+
 #include "EspMQTTClient.h"
+
 
 EspMQTTClient client
 (
@@ -18,6 +20,7 @@ EspMQTTClient client
   1883              // MQTT Port
 );
 
+
 void setup()
 {
 
@@ -28,6 +31,7 @@ void setup()
   client.enableDebuggingMessages();
 
 }
+
 
 // Function นี้ทำงานเมื่อ WiFi และ MQTT เชื่อมต่อไปยัง MQTT Broker สำเร็จ
 void onConnectionEstablished()
@@ -46,6 +50,7 @@ void onConnectionEstablished()
   client.publish("fibo/log", "My IoT Device Connected.");
 
 }
+
 
 void loop()
 {
